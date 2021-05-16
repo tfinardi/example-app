@@ -1,0 +1,13 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: app-conf
+  namespace: example-app
+data:
+  config.json: |
+    {
+      "pageTitle": "Example Application | Finardi.me",
+      "title": "Hello Guys!",
+      "project": "Example APP Deployment",
+      "description": "This is an example of building a packaged application for deployment to the Kubernetes cluster via Helm Chart on Github Actions"
+    }

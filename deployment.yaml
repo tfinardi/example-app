@@ -1,0 +1,30 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: example-app
+  namespace: example-app
+  labels:
+    app: example-app
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: example-app
+  template:
+    metadata:
+      labels:
+        app: example-app
+    spec:
+      containers:
+        - name: example-app
+          image: tfinardi/example-app:latest
+          imagePullPolicy: Always
+          ports:
+          - containerPort: 8080
+          volumeMounts:
+            - name: app-config
+              mountPath: /app/conf/
+      volumes:
+        - name: app-config
+          configMap:
+            name: app-conf

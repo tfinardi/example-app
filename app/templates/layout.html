@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="utf-8">
+    <link rel="icon" type="image/png" href="https://assets.azion.com/static/images/favicon/favicon.png">
+    <link rel="icon" type="image/png" href="https://assets.azion.com/static/images/favicon/favicon.png" size="32x32">
+
+    <title>{{texts.pageTitle}}</title>
+    
+    <link rel="stylesheet" href="https://assets.azion.com/static/css/pages/home.css?cache=site3">
+
+</head>
+
+    <body>
+		<header class="container site-header home">
+            <div class="content-wrapper" >
+                <div class="site-header-first-row">
+                    <div class="site-header-first-row__left">
+                    <!-- Logo -->
+                        <a href="/" class="logo">
+                            <svg width="130" height="25" viewBox="0 0 130 25" xmlns="http://www.w3.org/2000/svg">
+                                <g fill="#F3652B" fill-rule="evenodd">
+                                    <path d="M73.838 0L69 25h25.161L99 0H73.838zm3.93 4.723h15.467l-3.01 15.554H74.759l3.01-15.554zM66 0l-5 25h5l5-25zM26.307 0L.707 21.329 0 25h3.688L23.52 8.487 20.323 25h4.838L30 0zM125.162 0l-2.147 11.09 3.908 4.808L130 0h-4.838zm-20.323 0L100 25h4.84l3.317-17.138L122.136 25h3.025l.598-3.06L107.864 0h-3.025zM34.839 0l-.915 4.724h16.71L30.715 21.319 30 25h25.161l.915-4.724h-16.71L59.29 3.677 60 0z"/>
+                                </g>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <main class="site-main">
+            <div id="homeView" class="home-view-content v2">
+
+                <section class="introduce-box">
+                    <div class="box-container">
+                        {% block content %}{% endblock %}
+                    </div>
+                </section>              
+            </div>            
+        </main>
+
+	</body>
+</html>
