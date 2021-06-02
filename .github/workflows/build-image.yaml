@@ -1,4 +1,4 @@
-name: Publish Docker image
+name: Build and push the container image
 on:
   push:
     branches: [main]
@@ -6,6 +6,8 @@ on:
       - 'Dockerfile'
       - 'app/**'
       - 'conf/**'
+      - '.github/workflows/build-image.yaml'
+
 jobs:
   push_to_registry:
     name: Push Docker image to Docker Hub
@@ -13,6 +15,7 @@ jobs:
     steps:
       - name: Check out the repo
         uses: actions/checkout@v2
+        
       - name: Push to Docker Hub
         uses: docker/build-push-action@v1
         with:
